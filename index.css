@@ -24,7 +24,7 @@ h1 {
 hr {
     border: 2px solid green;
     width: 60%;
-    text-align: center;
+    margin-left: 2.5rem;
 }
 
 #main {
@@ -33,13 +33,14 @@ hr {
     height: auto;
     width: 90%;
     display: grid;
-    flex-wrap: wrap;
-    gap: 30px;
+    /* -wrap: wrap; */
+    gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
 #img {
-    background-size: cover;
+    /* background-size: cover; */
+    object-fit: cover;
     width: 100%;
     border-radius: 10px 10px 0 0;
     height: 50vh;
@@ -51,6 +52,7 @@ hr {
     border-radius: 10px;
     transition: 0.5s ease-in-out;
     box-shadow: 0.5px 0.5px 2px grey;
+    position: relative;
 }
 
 #ins1:hover {
@@ -85,4 +87,14 @@ hr {
     /* margin: 0px 0; */
     text-align: left;
     padding: 20px;
+}
+
+.h4 {
+    position: absolute;
+    background-color: #5ABA81;
+    color: white;
+    padding: 6px;
+    border-radius: 0 5px 0 0;
+    top: 0%;
+    right: 0%;
 }
