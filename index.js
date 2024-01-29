@@ -34,6 +34,7 @@ const array = [{
         Price: "$2,595"
     }
 ]
+
 for (let i = 0; i < array.length; i++) {
     doc.innerHTML += `
     <div id = "ins1">    
@@ -45,13 +46,17 @@ for (let i = 0; i < array.length; i++) {
     </div>
     <button id="btn">Not Interested</button>
     </div>
-    `
+    `;
+    let butn = document.getElementById("btn");
+
+    butn.addEventListener("click", () => {
+        doc.removeChild('ins1')
+
+    })
 
 }
-let butn = document.getElementById("btn");
 
 
-butn.addEventListener("click", () => {
-
-
-});
+// function updateDisplay() {
+//     doc.innerHTML =
+// }
