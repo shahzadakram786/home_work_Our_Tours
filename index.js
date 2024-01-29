@@ -55,12 +55,12 @@ for (let i = 0; i < array.length; i++) {
                 let ins = butn.closest('#ins1');
                 if (ins) {
                     doc.removeChild(ins);
-                    if (('#ins1').length === 0) {
+                    if (document.querySelectorAll('#ins1').length === 0) {
                         doc.innerHTML +=
                             `
                            <div>
                            <h2 id = "title">No Tours Left</h2>
-                           <button href="" id="rfrsh">Refresh</button>
+                           <a href=""> <button id="rfrsh">Refresh</button></a>
                            </div>`
                     }
 
