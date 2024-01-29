@@ -32,12 +32,10 @@ hr {
     margin-bottom: 5rem;
     height: auto;
     width: 90%;
-    /* display: grid; */
-    display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: row;
+    display: grid;
+    /* display: flex; */
     gap: 2rem;
-    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
 }
 
 #img {
@@ -64,8 +62,7 @@ hr {
 
 .h2 {
     text-align: center;
-    margin: 10px 0px 10px 30px;
-    padding: 10px;
+    margin-left: 1rem;
     width: 80%;
 }
 
@@ -75,7 +72,7 @@ hr {
     border-radius: 5px;
     color: #5ABA81;
     border: 1px solid#5ABA81;
-    margin: 10px 0 10px 40px;
+    margin: 1em 0 1em 1.5em;
     justify-content: center;
     transition: 0.3s;
 }
@@ -87,6 +84,7 @@ hr {
 
 .text {
     /* margin: 0px 0; */
+    font-size: 1rem;
     text-align: left;
     padding: 20px;
 }
@@ -99,4 +97,9 @@ hr {
     border-radius: 0 5px 0 0;
     top: 0%;
     right: 0%;
+}
+
+#title {
+    text-align: center;
+    background-color: #5ABA81;
 }
