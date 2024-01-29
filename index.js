@@ -44,17 +44,25 @@ for (let i = 0; i < array.length; i++) {
     <h2 class="h2">${array[i].title}</h2>
     <p class = "text">${array[i].text}</p>
     </div>
-    <button id="btn">Not Interested</button>
+    <button class="btn">Not Interested</button>
     </div>
     `;
-    let butn = document.getElementById("btn");
+    let butn = document.querySelectorAll(".btn");
+    butn.forEach((butn) => {
+            butn.addEventListener("click", () => {
+                // let ins = document.getElementById()
+                // let ins = butn.parentElement;
+                let ins = butn.closest('#ins1');
+                if (ins) {
+                    doc.removeChild(ins);
 
-    butn.addEventListener("click", () => {
-        doc.removeChild('ins1')
 
-    })
+                }
+            });
+        }
 
-}
+    )
+};
 
 
 // function updateDisplay() {
