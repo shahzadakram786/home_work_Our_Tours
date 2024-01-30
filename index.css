@@ -21,6 +21,15 @@ h1 {
     text-transform: uppercase;
 }
 
+
+/* #ourt {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: black;
+    font-size: 2em;
+    text-transform: uppercase;
+} */
+
 hr {
     border: 2px solid green;
     width: 60%;
@@ -29,6 +38,8 @@ hr {
 
 #main {
     /* background-color: yellow; */
+    /* margin-top: 6rem; */
+    position: relative;
     margin-bottom: 5rem;
     height: auto;
     width: 90%;
@@ -100,6 +111,49 @@ hr {
 }
 
 #title {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: black;
+    font-size: 2em;
+    text-transform: uppercase;
     text-align: center;
+}
+
+#title {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-size: 3em;
+    font-weight: 400;
+    /* background-color: #5ABA81; */
+}
+
+.aftr {
+    margin-top: 3rem;
+    font-weight: lighter;
+    width: 100%;
+    height: auto;
+    /* border: 2px solid black; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+#rfrsh {
     background-color: #5ABA81;
+    border: none;
+    padding: 5px;
+    color: white;
+    width: 10%;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#rfrsh:hover {
+    cursor: pointer;
+    background-color: #387857;
 }

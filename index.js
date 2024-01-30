@@ -1,4 +1,7 @@
 let doc = document.getElementById("main");
+let con = document.querySelectorAll(".container");
+let ttl = document.getElementById("heading");
+ttl.innerHTML += `  <h1 id="ourt">our tours<hr></h1>`
 
 
 const array = [{
@@ -48,32 +51,43 @@ for (let i = 0; i < array.length; i++) {
     </div>
     `;
     let butn = document.querySelectorAll(".btn");
-    butn.forEach((butn) => {
-            butn.addEventListener("click", () => {
-                // let ins = document.getElementById()
-                // let ins = butn.parentElement;
-                let ins = butn.closest('#ins1');
-                if (ins) {
-                    doc.removeChild(ins);
-                    if (document.querySelectorAll('#ins1').length === 0) {
-                        doc.innerHTML +=
-                            `
-                           <div>
-                           <h2 id = "title">No Tours Left</h2>
-                           <a href=""> <button id="rfrsh">Refresh</button></a>
-                           </div>`
-                    }
+    // butn.forEach((butn) => {
+    for (let i = 0; i < butn.length; i++) {
+        butn[i].addEventListener("click", () => {
+            // let ins = document.getElementById()
+            // let ins = butn.parentElement;
+            let ins = butn[i].closest('#ins1');
+            if (ins) {
+                ins.remove();
+
+                if (document.querySelectorAll('#ins1').length === 0) {
+                    ttl.style.display = "none";
+                    // ttl.innerHTML += `  <h1 id="ourt">No Tours Left</h1>`
+
+                    doc.innerHTML +=
+                        `
+                           <div class="aftr">
+                           <h4 id = "title">No Tours Left</h4>
+                           <button id="rfrsh">Refresh</button>
+                           </div>
+                        `;
+                    let rfrshbtn = document.getElementById("rfrsh")
+                    rfrshbtn.addEventListener("click", () => {
+                        location.reload();
+
+                    })
+
+                }
+
+            };
+
+        });
 
 
-                };
 
-            });
-
+    }
 
 
-        }
-
-    )
 };
 
 
