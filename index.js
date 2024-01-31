@@ -53,8 +53,8 @@ for (let i = 0; i < array.length; i++) {
     <h4 class="h4">${array[i].Price}</h4>
     <div id = "textArea">
     <h2 class="h2">${array[i].title}</h2>
-    <p class="text" id="txt1">${array[i].text}<button id="semore"  class = "see">... see more</button></p>
-    <p class="text" id="txt2">${array[i].text2}<button id="seless" class = "see">... see less</button></p>
+    <p class="txt1">${array[i].text}<button id="semore"  class = "see">... see more</button></p>
+    <p class="txt2">${array[i].text2}<button id="seless" class = "see">... see less</button></p>
     </div>
     <button class="btn">Not Interested</button>
     </div>
@@ -63,29 +63,34 @@ for (let i = 0; i < array.length; i++) {
 }
 
 // from here i am trying to set button for see more and less
-let text1 = document.getElementById("txt1");
-let text2 = document.getElementById("txt2");
+let text1 = document.querySelectorAll(".txt1");
+let text2 = document.querySelectorAll(".txt2");
 
-
+let seemore = document.getElementById("semore");
+let seeless = document.getElementById("seless");
 let see = document.querySelectorAll(".see")
 for (let i = 0; i < see.length; i++) {
     see[i].addEventListener("click", () => {
 
-        // let seemore = document.getElementById("semore");
-        // let seeless = document.getElementById("seless");
+        if (text1 && text2) {
+            // Check if both text1 and text2 exist
+            text1.style.display = text1.style.display === "none" ? "block" : "none";
+            text2.style.display = text2.style.display === "none" ? "block" : "none";
 
-        // seemore.addEventListener("click", () => {
-        //     text2.style.display = "block";
-        //     seemore.style.display = "none";
-        console.log("working")
+            seemore.addEventListener("click", () => {
+                text2.style.display = "block";
+                seemore.style.display = "none";
+                console.log("working")
 
-        // });
-        // seeless.addEventListener("click", () => {
-        //     text2.style.display = "none";
-        //     seemore.style.display = "block";
-        // console.log("working")
+            });
+            seeless.addEventListener("click", () => {
+                text2.style.display = "none";
+                seemore.style.display = "block";
+                console.log("working")
 
-        // });
+            });
+        }
+
     });
 }
 
