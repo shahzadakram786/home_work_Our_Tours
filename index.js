@@ -71,21 +71,21 @@ let see = document.querySelectorAll(".see")
 for (let i = 0; i < see.length; i++) {
     see[i].addEventListener("click", () => {
 
-        let seemore = document.getElementById("semore");
-        let seeless = document.getElementById("seless");
+        // let seemore = document.getElementById("semore");
+        // let seeless = document.getElementById("seless");
 
-        seemore.addEventListener("click", () => {
-            text2.style.display = "block";
-            seemore.style.display = "none";
-            console.log("working")
+        // seemore.addEventListener("click", () => {
+        //     text2.style.display = "block";
+        //     seemore.style.display = "none";
+        console.log("working")
 
-        });
-        seeless.addEventListener("click", () => {
-            text2.style.display = "none";
-            seemore.style.display = "block";
-            console.log("working")
+        // });
+        // seeless.addEventListener("click", () => {
+        //     text2.style.display = "none";
+        //     seemore.style.display = "block";
+        // console.log("working")
 
-        });
+        // });
     });
 }
 
@@ -95,31 +95,32 @@ let butn = document.querySelectorAll(".btn");
 
 for (let i = 0; i < butn.length; i++) {
     butn[i].addEventListener("click", () => {
-        let ins = butn[i].closest('#ins1');
-        if (ins) {
-            ins.remove();
+        console.log("working")
+            // let ins = butn[i].closest('#ins1');
+            // if (ins) {
+            //     ins.remove();
 
-            if (document.querySelectorAll('#ins1').length === 0) {
-                ttl.style.display = "none";
-                doc.innerHTML +=
-                    `
-                           <div class="aftr">
-                           <h4 id = "title">No Tours Left</h4>
-                           <a href="" id="rfrsh"><button >Refresh</button>
-                           <a></div>
-                        `;
-                // let rfrshbtn = document.getElementById("rfrsh")
-                // rfrshbtn.addEventListener("click", () => {
-                // location.reload();
+        //     if (document.querySelectorAll('#ins1').length === 0) {
+        //         ttl.style.display = "none";
+        //         doc.innerHTML +=
+        //             `
+        //                    <div class="aftr">
+        //                    <h4 id = "title">No Tours Left</h4>
+        //                    <a href="" id="rfrsh"><button >Refresh</button>
+        //                    <a></div>
+        //                 `;
+        // let rfrshbtn = document.getElementById("rfrsh")
+        // rfrshbtn.addEventListener("click", () => {
+        // location.reload();
 
 
-                // })
+    })
 
-            }
+    // }
 
-        };
+    // };
 
-    });
+    // });
 
 
 
