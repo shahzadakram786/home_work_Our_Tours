@@ -65,23 +65,25 @@ for (let i = 0; i < array.length; i++) {
 
     let see = document.querySelectorAll(".see")
     for (let i = 0; i < see.length; i++) {
+        see[i].addEventListener("click", () => {
+            if (text1.length) {
+                text1.style.display = "none";
+            } else {
+                text1.style.display = "block";
+            }
 
-        if (text1.length) {
-            text1.style.display = "none";
-        } else {
-            text1.style.display = "block";
-        }
 
+            let seemore = document.getElementById("semore");
+            let seeless = document.getElementById("seless");
 
-        let seemore = document.getElementById("semore");
-        let seeless = document.getElementById("seless");
+            seemore.addEventListener("click", () => {
+                text2.style.display = "none";
+                seemore.style.display = "none";
 
-        seemore.addEventListener("click", () => {
-            text2.style.display = "none";
-
-        });
-        seeless.addEventListener("click", () => {
-            text2.style.display = "none"
+            });
+            seeless.addEventListener("click", () => {
+                text2.style.display = "none"
+            });
         });
     }
 }
