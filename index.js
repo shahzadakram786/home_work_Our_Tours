@@ -77,11 +77,13 @@ for (let i = 0; i < see.length; i++) {
         seemore.addEventListener("click", () => {
             text2.style.display = "block";
             seemore.style.display = "none";
+            console.log("working")
 
         });
         seeless.addEventListener("click", () => {
             text2.style.display = "none";
             seemore.style.display = "block";
+            console.log("working")
 
         });
     });
