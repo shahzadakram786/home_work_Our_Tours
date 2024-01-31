@@ -59,47 +59,37 @@ for (let i = 0; i < array.length; i++) {
     <button class="btn">Not Interested</button>
     </div>
     `;
-    let text1 = document.getElementById("txt1");
-    let text2 = document.getElementById("txt2");
 
-
-    let see = document.querySelectorAll(".see")
-    for (let i = 0; i < see.length; i++) {
-        see[i].addEventListener("click", () => {
-            if (text1.length) {
-                text1.style.display = "none";
-            } else {
-                text1.style.display = "block";
-            }
-
-
-            let seemore = document.getElementById("semore");
-            let seeless = document.getElementById("seless");
-
-            seemore.addEventListener("click", () => {
-                text2.style.display = "none";
-                seemore.style.display = "none";
-
-            });
-            seeless.addEventListener("click", () => {
-                text2.style.display = "none"
-            });
-        });
-    }
 }
 
+// from here i am trying to set button for see more and less
+let text1 = document.getElementById("txt1");
+let text2 = document.getElementById("txt2");
+
+
+let see = document.querySelectorAll(".see")
+for (let i = 0; i < see.length; i++) {
+    see[i].addEventListener("click", () => {
+
+        let seemore = document.getElementById("semore");
+        let seeless = document.getElementById("seless");
+
+        seemore.addEventListener("click", () => {
+            text2.style.display = "block";
+            seemore.style.display = "none";
+
+        });
+        seeless.addEventListener("click", () => {
+            text2.style.display = "none";
+            seemore.style.display = "block";
+
+        });
+    });
+}
+
+// from here i am trying to set the buttonsfor not interesting buttons
+
 let butn = document.querySelectorAll(".btn");
-// let para = document.querySelectorAll(".text");
-
-// let shortPara = para / 2
-// for (let i = 0; i < para.length; i++) {
-//     if (para.length / 2) {
-//         console.log(para)
-//         para.innerHTML += `<button id = "smore">see_more</button>`
-
-//     }
-// }
-
 
 for (let i = 0; i < butn.length; i++) {
     butn[i].addEventListener("click", () => {
