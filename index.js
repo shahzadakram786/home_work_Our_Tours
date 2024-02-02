@@ -48,7 +48,7 @@ for (let i = 0; i < array.length; i++) {
 
 
     doc.innerHTML += `
-    <div id = "ins1">    
+    <div class = "ins1">    
     <img src = "${array[i].img}" id="img">
     <h4 class="h4">${array[i].Price}</h4>
     <div id = "textArea">
@@ -73,7 +73,7 @@ let seeless = document.querySelectorAll(".seless");
 
 let see = document.querySelectorAll(".see")
 console.log("inside  seee , ", see)
-for (let i = 0; i < seemore.length; i++) {
+for (let i = 0; i < see.length; i++) {
     // see[i].addEventListener("click", () => {
     //     console.log("wrking we are her")
 
@@ -117,11 +117,12 @@ let butn = document.querySelectorAll(".btn");
 for (let i = 0; i < butn.length; i++) {
     butn[i].addEventListener("click", () => {
         console.log("working")
-        let ins = butn[i].closest('#ins1');
+        let ins = butn[i].closest('.ins1');
         if (ins) {
             ins.remove();
 
-            if (document.querySelectorAll('#ins1').length === 0) {
+
+            if (document.querySelectorAll('.ins1').length === 0) {
                 ttl.style.display = "none";
                 doc.innerHTML +=
                     `
