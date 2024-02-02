@@ -68,65 +68,48 @@ for (let i = 0; i < array.length; i++) {
 let seemore = document.querySelectorAll(".semore");
 let seeless = document.querySelectorAll(".seless");
 
-
-
-
-let see = document.querySelectorAll(".see")
-console.log("inside  seee , ", see)
-for (let i = 0; i < see.length; i++) {
-    // see[i].addEventListener("click", () => {
-    //     console.log("wrking we are her")
-
-
-
-    // if (text1 && text2) {
-    //     console.log("inside 2n if ")
-
+for (let i = 0; i < seemore.length; i++) {
     seemore[i].addEventListener("click", () => {
-        let seebtn = document.querySelectorAll('#ins1');
-
         let text2 = document.querySelectorAll(".txt2");
         text2[i].style.display = "block";
+
         let text1 = document.querySelectorAll(".txt1");
         text1[i].style.display = "none";
-        seemore.style.display = "none";
-        console.log("working")
 
+        seemore[i].style.display = "none";
+        seeless[i].style.display = "inline-block";
     });
 
     seeless[i].addEventListener("click", () => {
         let text2 = document.querySelectorAll(".txt2");
         text2[i].style.display = "none";
+
         let text1 = document.querySelectorAll(".txt1");
         text1[i].style.display = "block";
-        seemore.style.display = "block";
 
-        console.log("working")
-
+        seemore[i].style.display = "inline-block";
+        seeless[i].style.display = "none";
     });
-
-    // }
-
-    // });
 }
 
 // from here i am trying to set the buttonsfor not interesting buttons
 
 let butn = document.querySelectorAll(".btn");
-
 for (let i = 0; i < butn.length; i++) {
+    // console.log("working or not working")
     butn[i].addEventListener("click", () => {
-        console.log("working")
-        let ins = butn[i].closest('.ins1');
+        // console.log("working")
+        let ins = document.querySelectorAll('.ins1');
         if (ins) {
-            ins.remove();
+            ins[i].remove();
+
 
 
             if (document.querySelectorAll('.ins1').length === 0) {
                 ttl.style.display = "none";
                 doc.innerHTML +=
                     `
-                           <div class="aftr">
+                          <div class="aftr">
                            <h4 id = "title">No Tours Left</h4>
                            <a href="" id="rfrsh"><button >Refresh</button>
                            <a></div>
@@ -138,9 +121,8 @@ for (let i = 0; i < butn.length; i++) {
 
                 })
 
-            }
-
-        };
+            };
+        }
 
     });
 
