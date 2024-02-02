@@ -53,8 +53,8 @@ for (let i = 0; i < array.length; i++) {
     <h4 class="h4">${array[i].Price}</h4>
     <div id = "textArea">
     <h2 class="h2">${array[i].title}</h2>
-    <p class="text" id="txt1">${array[i].text}<button   class = "see semore">... see more</button></p>
-    <p class="text" id="txt2">${array[i].text2}<button  class = "see seless">... see less</button></p>
+    <p class="text txt1" >${array[i].text}<button   class = "see semore">... see more</button></p>
+    <p class="text txt2" >${array[i].text2}<button  class = "see seless">... see less</button></p>
     </div>
     <button class="btn">Not Interested</button>
     </div>
@@ -73,41 +73,41 @@ let seeless = document.querySelectorAll(".seless");
 
 let see = document.querySelectorAll(".see")
 console.log("inside  seee , ", see)
-for (let i = 0; i < see.length; i++) {
-    see[i].addEventListener("click", () => {
-        console.log("wrking we are her")
+for (let i = 0; i < seemore.length; i++) {
+    // see[i].addEventListener("click", () => {
+    //     console.log("wrking we are her")
+
+
+
+    // if (text1 && text2) {
+    //     console.log("inside 2n if ")
+
+    seemore[i].addEventListener("click", () => {
         let seebtn = document.querySelectorAll('#ins1');
 
-
-
-        if (text1 && text2) {
-            console.log("inside 2n if ")
-                // Check if both text1 and text2 exist
-                // text1.style.display = text1.style.display === "none" ? "block" : "none";
-                // text2.style.display = text2.style.display === "none" ? "block" : "none";
-
-            seemore[i].addEventListener("click", () => {
-                text2[i].style.display = "block";
-                text1[i].style.display = "none";
-                seemore.style.display = "none";
-                console.log("working")
-
-            });
-
-            seeless[i].addEventListener("click", () => {
-                let text2 = document.getElementById("txt2");
-                text2[i].style.display = "none";
-                let text1 = document.getElementById("txt1");
-                text1[i].style.display = "block";
-                seemore.style.display = "block";
-
-                console.log("working")
-
-            });
-
-        }
+        let text2 = document.querySelectorAll(".txt2");
+        text2[i].style.display = "block";
+        let text1 = document.querySelectorAll(".txt1");
+        text1[i].style.display = "none";
+        seemore.style.display = "none";
+        console.log("working")
 
     });
+
+    seeless[i].addEventListener("click", () => {
+        let text2 = document.querySelectorAll(".txt2");
+        text2[i].style.display = "none";
+        let text1 = document.querySelectorAll(".txt1");
+        text1[i].style.display = "block";
+        seemore.style.display = "block";
+
+        console.log("working")
+
+    });
+
+    // }
+
+    // });
 }
 
 // from here i am trying to set the buttonsfor not interesting buttons
