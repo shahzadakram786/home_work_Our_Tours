@@ -100,6 +100,10 @@ hr {
     padding: 20px;
 }
 
+#txt2 {
+    display: none;
+}
+
 .h4 {
     position: absolute;
     background-color: #5ABA81;
