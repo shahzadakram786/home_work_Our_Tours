@@ -54,7 +54,7 @@ for (let i = 0; i < array.length; i++) {
     <div id = "textArea">
     <h2 class="h2">${array[i].title}</h2>
     <p class="text" id="txt1">${array[i].text}<button   class = "see semore">... see more</button></p>
-    <p class="text" id="txt2">${array[i].text2}<button class = "see seless">... see less</button></p>
+    <p class="text" id="txt2">${array[i].text2}<button  class = "see seless">... see less</button></p>
     </div>
     <button class="btn">Not Interested</button>
     </div>
@@ -63,10 +63,10 @@ for (let i = 0; i < array.length; i++) {
 }
 
 // from here i am trying to set button for see more and less
-let text1 = document.getElementById("txt1");
-let text2 = document.getElementById("txt2");
-let seemore = document.getElementsByClassName("semore");
-let seeless = document.getElementsByClassName("seless");
+
+
+let seemore = document.querySelectorAll(".semore");
+let seeless = document.querySelectorAll(".seless");
 
 
 
@@ -78,31 +78,33 @@ for (let i = 0; i < see.length; i++) {
         console.log("wrking we are her")
         let seebtn = document.querySelectorAll('#ins1');
 
-        if (seebtn) {
-            console.log("inside first if")
-            if (text1 && text2) {
-                console.log("inside 2n if ")
-                    // Check if both text1 and text2 exist
-                    // text1.style.display = text1.style.display === "none" ? "block" : "none";
-                    // text2.style.display = text2.style.display === "none" ? "block" : "none";
 
-                seemore[i].addEventListener("click", () => {
-                    text2[i].style.display = "block";
-                    text1[i].style.display = "none";
-                    seemore.style.display = "none";
-                    console.log("working")
 
-                });
+        if (text1 && text2) {
+            console.log("inside 2n if ")
+                // Check if both text1 and text2 exist
+                // text1.style.display = text1.style.display === "none" ? "block" : "none";
+                // text2.style.display = text2.style.display === "none" ? "block" : "none";
 
-                seeless[i].addEventListener("click", () => {
-                    text2[i].style.display = "none";
-                    seemore.style.display = "block";
-                    text1[i].style.display = "block";
+            seemore[i].addEventListener("click", () => {
+                text2[i].style.display = "block";
+                text1[i].style.display = "none";
+                seemore.style.display = "none";
+                console.log("working")
 
-                    console.log("working")
+            });
 
-                });
-            }
+            seeless[i].addEventListener("click", () => {
+                let text2 = document.getElementById("txt2");
+                text2[i].style.display = "none";
+                let text1 = document.getElementById("txt1");
+                text1[i].style.display = "block";
+                seemore.style.display = "block";
+
+                console.log("working")
+
+            });
+
         }
 
     });
