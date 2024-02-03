@@ -114,6 +114,7 @@ for (let i = 0; i < butn.length; i++) {
                            <a href="" id="rfrsh"><button >Refresh</button>
                            <a></div>
                         `;
+
                 let rfrshbtn = document.getElementById("rfrsh")
                 rfrshbtn.addEventListener("click", () => {
                     location.reload();
@@ -130,6 +131,27 @@ for (let i = 0; i < butn.length; i++) {
 
 }
 
+
+// task 2 : longest word in the array 
+const arr = "a quick brown fox jumps over the lazy dog";
+
+
+function longestWord(arr) {
+    let count = 0;
+    let previous = 0;
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] !== " ") {
+            count++;
+        } else {
+            if (count > longestWord) {
+                longestWord = count;
+            }
+        }
+    }
+    return longestWord;
+}
+console.log(longestWord(arr));
 
 
 

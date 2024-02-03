@@ -172,4 +172,5 @@ hr {
     color: green;
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
