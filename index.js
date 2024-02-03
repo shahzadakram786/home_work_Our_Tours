@@ -99,7 +99,7 @@ for (let i = 0; i < butn.length; i++) {
     // console.log("working or not working")
     butn[i].addEventListener("click", () => {
         // console.log("working")
-        let ins = document.querySelectorAll('.ins1');
+        var ins = document.querySelectorAll('.ins1');
         if (ins) {
             ins[i].remove();
 
@@ -138,17 +138,18 @@ const arr = "a quick brown fox jumps over the lazy dog";
 
 function longestWord(arr) {
     let count = 0;
-    let previous = 0;
+    let longword = 0;
     for (let i = 0; i < arr.length; i++) {
 
         if (arr[i] !== " ") {
             count++;
         } else {
-            if (count > longestWord) {
-                longestWord = count;
+            if (count > longword) {
+                longword = count;
             }
         }
     }
+
     return longestWord;
 }
 console.log(longestWord(arr));
