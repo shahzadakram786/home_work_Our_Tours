@@ -111,6 +111,7 @@ for (let i = 0; i < butn.length; i++) {
                     `
                           <div class="aftr">
                            <h4 id = "title">No Tours Left</h4>
+                          
                            <a href="" id="rfrsh"><button >Refresh</button>
                            <a></div>
                         `;
