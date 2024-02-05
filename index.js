@@ -118,7 +118,7 @@ for (let i = 0; i < butn.length; i++) {
 
                 let rfrshbtn = document.getElementById("rfrsh")
                 rfrshbtn.addEventListener("click", () => {
-                    location.reload();
+                    // location.reload();
 
 
                 })
@@ -138,15 +138,15 @@ const arr = "a quick brown fox jumps over the lazy dog";
 
 
 function longestWord(arr) {
-    let count = 0;
+    let num = 0;
     let longword = 0;
     for (let i = 0; i < arr.length; i++) {
 
         if (arr[i] !== " ") {
-            count++;
+            num++;
         } else {
-            if (count > longword) {
-                longword = count;
+            if (num > longword) {
+                longword = num;
             }
         }
     }
