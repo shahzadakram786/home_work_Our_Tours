@@ -179,23 +179,23 @@ hr {
 
 /* //from here i am making it responsiveive */
 
-@media screen and (max-width=1200px) {
+@media screen and (max-width:1200px) {
     #main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (max-width=900px) {
+@media only screen and (max-width:900px) {
     #main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width=1200px) {
+@media screen and (max-width:600px) {
     #main {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
