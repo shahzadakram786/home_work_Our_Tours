@@ -64,6 +64,7 @@ hr {
     transition: 0.5s ease-in-out;
     box-shadow: 0.5px 0.5px 2px grey;
     position: relative;
+    /* background-color: red; */
 }
 
 .ins1:hover {
@@ -173,4 +174,28 @@ hr {
     border: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+
+/* //from here i am making it responsiveive */
+
+@media screen and (max-width=1200px) {
+    #main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width=900px) {
+    #main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width=1200px) {
+    #main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
